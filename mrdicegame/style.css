@@ -1,13 +1,15 @@
-@font-face{
-    font-family: 'khazad';
-    src: url("fonts/KhazadDum3D.ttf") format('truetype');
-}
+
 body{
   margin: 0;
   background-image: url("images/background.jpg");
   background-position: center;
   background-size: cover;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 .winDiv{
   width: 100vw;
@@ -19,7 +21,8 @@ body{
 .winDec{
     font-family: khazad;
     font-weight: bold;
-    color: red;
+    color: blue;
+    font-size: 100px;
 }
 
 .diceParent{
@@ -81,4 +84,18 @@ body{
   
   .roller{
       animation: rotate 2s linear;
+  }
+
+  @keyframes rotate{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(3600deg);
+    }
+
+  }
+
+  .roller{
+    animation: rotate 2s linear;
   }

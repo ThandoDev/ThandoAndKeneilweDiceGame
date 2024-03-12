@@ -1,101 +1,86 @@
-
-body{
-  margin: 0;
-  background-image: url("images/background.jpg");
-  background-position: center;
-  background-size: cover;
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-.winDiv{
-  width: 100vw;
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.winDec{
-    font-family: khazad;
-    font-weight: bold;
-    color: blue;
-    font-size: 100px;
+/* Setting up the basic layout of the webpage */
+body {
+  margin: 0; /* No margin around the page */
+  background-image: url("images/background.jpg"); /* Background image for the page */
+  background-position: center; /* Position the background image at the center */
+  background-size: cover; /* Cover the entire background */
+  user-select: none; /* Disable text selection */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 100vh; /* Take up the full height of the viewport */
 }
 
-.diceParent{
-  display: flex;
-  align-items: center;
+/* Styling for the message area */
+.winDiv {
+  width: 100vw; /* Take up the full width of the viewport */
+  height: 20vh; /* 20% of the viewport height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
 }
 
-.diceChild{
-  width: 50vw;
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+/* Styling for the message text */
+.winDec {
+  font-family: khazad; /* Custom font */
+  font-weight: bold; /* Bold text */
+  color: blue; /* Blue color */
+  font-size: 100px; /* Large font size */
 }
 
-.btnDiv{
-  width: 100vw;
-  height: 20vh;
+/* Styling for the dice container */
+.diceParent {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
 }
 
-.btnDiv{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Styling for each individual dice */
+.diceChild {
+  width: 50vw; /* 50% of the viewport width */
+  height: 60vh; /* 60% of the viewport height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-direction: column; /* Arrange items vertically */
 }
 
-.btnDiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #playBtn{
-     width: 20%;
-  }
-  
-  @media (orientation: landscape){
-  
-  }
-  
-  @media (orientation: portrait){
-      .diceParent{
-          flex-direction: column;
-      }
-      #playBtn{
-          width: 40%;
-       }
-  }
-  
-  @keyframes rotate {
-      from{
-           transform: rotate(0deg);
-      }
-      to{
-          transform: rotate(3600deg);
-      }
-  }
-  
-  .roller{
-      animation: rotate 2s linear;
-  }
+/* Styling for the button container */
+.btnDiv {
+  width: 100vw; /* Take up the full width of the viewport */
+  height: 20vh; /* 20% of the viewport height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
 
-  @keyframes rotate{
-    from{
-      transform: rotate(0deg);
-    }
-    to{
-      transform: rotate(3600deg);
-    }
+/* Styling for the play button */
+#playBtn {
+  width: 20%; /* 20% of its container's width */
+}
 
+/* Media queries for different device orientations */
+@media (orientation: portrait) {
+  /* Adjustments for portrait orientation */
+  .diceParent {
+    flex-direction: column; /* Arrange dice vertically */
   }
+  #playBtn {
+    width: 40%; /* 40% of its container's width */
+  }
+}
 
-  .roller{
-    animation: rotate 2s linear;
+/* Animation for rotating the dice */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Start rotating from 0 degrees */
   }
+  to {
+    transform: rotate(3600deg); /* Rotate 3600 degrees */
+  }
+}
+
+/* Apply rotation animation to elements with class 'roller' */
+.roller {
+  animation: rotate 2s linear; /* Rotate over 2 seconds linearly */
+}
